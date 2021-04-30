@@ -3,18 +3,25 @@ Imports System.Data.OleDb
 
 
 Module ModuloBaseDatos
-    ''''''''''' Crear Variables del Sistema'''''''''''''''''
-    'PASO01: Crear la Cadena de Conexion
-    Public Conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\RONALD LOPEZ\Desktop\VBNET\Organizador\BD.accdb")
 
-    'PASO02: Creamos los Command -->son comandos de ejecucion
+
+    ''''''''''' Crear Variables del Sistema'''''''''''''''''
+    'PASO 0: Crear Ruta de BD
+    Dim rutaApp As String = Application.StartupPath()
+    Dim rutaAppCount As Integer = Len(rutaApp) - 10
+    Dim rutaBD As String = Mid(rutaApp, 1, rutaAppCount)
+
+    'PASO 1: Crear la Cadena de Conexion
+    Public Conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & rutaBD & "\BD.accdb")
+
+    'PASO 2: Creamos los Command -->son comandos de ejecucion
     Public Cmd As New OleDbCommand
 
 
-    'PASO03: DataReader
+    'PASO 3: DataReader
     Public dr As OleDbDataReader 'Es una variable de tipo DataReader que sirve para almacenar todos los datos que nos brinde el Cmd o Command
 
-    'PASO04: Variable Texto llamda SQL
+    'PASO 4: Variable Texto llamda SQL
     Public sql As String = ""
     ''''''''''''''''''''''''''''''''''''''''''
 
