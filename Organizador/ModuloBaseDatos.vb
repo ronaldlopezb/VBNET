@@ -3,7 +3,7 @@ Imports System.Data.OleDb
 Module ModuloBaseDatos
     ''''''''''' Crear Variables del Sistema'''''''''''''''''
     'PASO01: Crear la Cadena de Conexion
-    Public Conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\RONALD LOPEZ\Desktop\VBNET\Organizador\Organizador\BD.accdb")
+    Public Conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\RONALD LOPEZ\Desktop\VBNET\Organizador\BD.accdb")
 
     'PASO02: Creamos los Command -->son comandos de ejecucion
     Public Cmd As New OleDbCommand
@@ -23,7 +23,7 @@ Module ModuloBaseDatos
         Try
             ''Abrir la conexion con BD
             Conn.Open() '' Abre la Conexion a la Base de Datos
-            MsgBox("Felicitaciones ya estas conectado a SQL SERVER")
+            ''MsgBox("Felicitaciones ya estas conectado a SQL SERVER")
         Catch ex As Exception
             ''Que me diga que error salio
             MsgBox(ex.ToString)
@@ -39,7 +39,7 @@ Module ModuloBaseDatos
 
         'PASO 02: Crear la Consulta SQL
         sql = ""
-        sql = "Select id,Usuario,Clave from TablaUsuarios where usuario='" + UsuarioVariable + "' and Clave='" + ClaveVariable + "'"
+        sql = "Select IdUsuario, Usuario, Clave from TablaUsuario where Usuario='" + UsuarioVariable + "' and Clave='" + ClaveVariable + "'"
         'MsgBox(sql)
 
         'PASO 03: Le damos el SQL al CMD
@@ -54,7 +54,8 @@ Module ModuloBaseDatos
                 FrmPrincipal.Show()
                 FrmLogin.Hide()
             Else
-                MsgBox("Los datos ingresados no son correctos")
+                dr.Close()
+                MsgBox("Lo sentimos, las credenciales ingresadas no son correctas. ", vbInformation, "Error - Identificación")
             End If
         Catch ex As Exception
             MsgBox(ex.ToString)
