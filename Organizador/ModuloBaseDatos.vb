@@ -1,5 +1,7 @@
 ﻿'Importar la libreria de la Base de Datos con la que queremos trabajar.
 Imports System.Data.OleDb
+
+
 Module ModuloBaseDatos
     ''''''''''' Crear Variables del Sistema'''''''''''''''''
     'PASO01: Crear la Cadena de Conexion
@@ -30,9 +32,13 @@ Module ModuloBaseDatos
             End
         End Try
     End Sub
+
+    Public Sub main()
+
+    End Sub
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Public Sub Login(ByVal UsuarioVariable As String, ByVal ClaveVariable As String)
+    Public Function Login(ByVal UsuarioVariable As String, ByVal ClaveVariable As String) As Boolean
         'PASO 01: Configurar el CMD o Command...
         Cmd.Connection = Conn 'Le decimos al CMD que Base de Datos Usar
         Cmd.CommandType = CommandType.Text 'Le decimos al CMD que es tipo Texto y va ejecutar TEXTO
@@ -51,16 +57,21 @@ Module ModuloBaseDatos
             ''Verificar si trajo por lo menos 1 registro.
             If dr.HasRows Then
                 dr.Close()
-                FrmPrincipal.Show()
-                FrmLogin.Hide()
+                isLogin = True
+                'FrmPrincipal.Show()
+                'FrmLogin.Hide()
             Else
                 dr.Close()
-                MsgBox("Lo sentimos, las credenciales ingresadas no son correctas. ", vbInformation, "Error - Identificación")
+                isLogin = False
+                Return False
             End If
         Catch ex As Exception
             MsgBox(ex.ToString)
+            isLogin = False
+            Return False
         End Try
 
+        Return True
 
-    End Sub
+    End Function
 End Module

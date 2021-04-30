@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6A2F5FA8-4C51-46D6-AE7A-1F0D4FC03A58}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Organizador.My.MyApplication</StartupObject>
-    <RootNamespace>Organizador</RootNamespace>
-    <AssemblyName>Organizador</AssemblyName>
+    <StartupObject>Calendary.My.MyApplication</StartupObject>
+    <RootNamespace>Calendary</RootNamespace>
+    <AssemblyName>Calendary</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Organizador.xml</DocumentationFile>
+    <DocumentationFile>Calendary.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Organizador.xml</DocumentationFile>
+    <DocumentationFile>Calendary.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -88,10 +88,13 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuloBaseDatos.vb" />
+    <Compile Include="ModuloMain.vb" />
+    <Compile Include="ModuloVariables.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -141,6 +144,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back02.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
