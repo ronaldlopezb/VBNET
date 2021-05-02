@@ -63,26 +63,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property back() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("back", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property back01() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("back01", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property back02() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("back02", resourceCulture)
@@ -93,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property calendar_page_close_up_on_blue_surface() As System.Drawing.Bitmap
+        Friend ReadOnly Property moinetux_isb_tux() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("calendar-page-close-up-on-blue-surface", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("moinetux_isb_tux", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -103,9 +83,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property moinetux_isb_tux() As System.Drawing.Bitmap
+        Friend ReadOnly Property Spinner_1s_200px() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("moinetux_isb_tux", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Spinner_1s_200px", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

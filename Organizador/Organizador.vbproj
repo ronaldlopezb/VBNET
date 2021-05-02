@@ -151,5 +151,11 @@
   <ItemGroup>
     <None Include="Resources\back02.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spinner-1s-200px.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

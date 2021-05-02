@@ -22,6 +22,7 @@ Partial Class FrmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LblLoginTitulo = New System.Windows.Forms.Label()
         Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.BtnIngresar = New System.Windows.Forms.Button()
@@ -31,6 +32,10 @@ Partial Class FrmLogin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PbLogin = New System.Windows.Forms.ProgressBar()
+        Me.TimerLoading = New System.Windows.Forms.Timer(Me.components)
+        Me.ImgLoading = New System.Windows.Forms.PictureBox()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblLoginTitulo
@@ -47,22 +52,25 @@ Partial Class FrmLogin
         '
         'TxtUsuario
         '
-        Me.TxtUsuario.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsuario.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUsuario.Location = New System.Drawing.Point(583, 169)
         Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(230, 33)
+        Me.TxtUsuario.Size = New System.Drawing.Size(230, 27)
         Me.TxtUsuario.TabIndex = 1
+        Me.TxtUsuario.Text = "ronaldlopezb"
         Me.TxtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnIngresar
         '
-        Me.BtnIngresar.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(91, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.BtnIngresar.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
         Me.BtnIngresar.Location = New System.Drawing.Point(572, 321)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.Size = New System.Drawing.Size(253, 45)
         Me.BtnIngresar.TabIndex = 3
         Me.BtnIngresar.Text = "Ingresar"
-        Me.BtnIngresar.UseVisualStyleBackColor = True
+        Me.BtnIngresar.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -88,12 +96,13 @@ Partial Class FrmLogin
         '
         'TxtClave
         '
-        Me.TxtClave.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtClave.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtClave.Location = New System.Drawing.Point(583, 247)
         Me.TxtClave.Name = "TxtClave"
         Me.TxtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtClave.Size = New System.Drawing.Size(230, 33)
+        Me.TxtClave.Size = New System.Drawing.Size(230, 27)
         Me.TxtClave.TabIndex = 2
+        Me.TxtClave.Text = "Sraonndarl817"
         Me.TxtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -125,9 +134,30 @@ Partial Class FrmLogin
         Me.PbLogin.Location = New System.Drawing.Point(532, 468)
         Me.PbLogin.Name = "PbLogin"
         Me.PbLogin.Size = New System.Drawing.Size(320, 23)
-        Me.PbLogin.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.PbLogin.Step = 1
         Me.PbLogin.TabIndex = 9
         Me.PbLogin.Visible = False
+        '
+        'TimerLoading
+        '
+        '
+        'ImgLoading
+        '
+        Me.ImgLoading.BackColor = System.Drawing.Color.Transparent
+        Me.ImgLoading.Image = Global.Calendary.My.Resources.Resources.Spinner_1s_200px
+        Me.ImgLoading.Location = New System.Drawing.Point(648, 385)
+        Me.ImgLoading.Name = "ImgLoading"
+        Me.ImgLoading.Size = New System.Drawing.Size(100, 100)
+        Me.ImgLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ImgLoading.TabIndex = 11
+        Me.ImgLoading.TabStop = False
+        Me.ImgLoading.Visible = False
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
         'FrmLogin
         '
@@ -137,6 +167,7 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
+        Me.Controls.Add(Me.ImgLoading)
         Me.Controls.Add(Me.PbLogin)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -152,6 +183,7 @@ Partial Class FrmLogin
         Me.Name = "FrmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calendary - Identificación de Usuario"
+        CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -166,4 +198,7 @@ Partial Class FrmLogin
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents PbLogin As ProgressBar
+    Friend WithEvents TimerLoading As Timer
+    Friend WithEvents ImgLoading As PictureBox
+    Friend WithEvents ImageList1 As ImageList
 End Class

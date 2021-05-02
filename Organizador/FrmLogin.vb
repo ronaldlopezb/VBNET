@@ -3,9 +3,15 @@
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BtnIngresar.Click
         If TxtUsuario.Text = "" Then MsgBox("Por favor ingrese su Nombre de Usuario", vbInformation, "Error - Identificación") : TxtUsuario.Select() : Return
         If TxtClave.Text = "" Then MsgBox("Por favor ingrese su Contraseña", vbInformation, "Error - Identificación") : TxtClave.Select() : Return
+
         If Login(TxtUsuario.Text, TxtClave.Text) Then
-            FrmPrincipal.Show()
-            Me.Close()
+
+            PbLogin.Visible = False
+            ImgLoading.Visible = True
+
+            TimerLoading.Interval = 10
+            TimerLoading.Enabled = True
+
         Else
             MsgBox("Lo sentimos, las credenciales ingresadas no son correctas. ", vbInformation, "Error - Identificación")
         End If
@@ -15,5 +21,17 @@
         ConectarBD()
     End Sub
 
+    Private Sub TimerLoading_Tick(sender As Object, e As EventArgs) Handles TimerLoading.Tick
+        PbLogin.Increment(1)
 
+        If PbLogin.Value = PbLogin.Maximum Then
+            TimerLoading.Stop()
+            TimerLoading.Enabled = False
+
+            FrmPrincipal.Show()
+            Me.Close()
+        End If
+
+
+    End Sub
 End Class
