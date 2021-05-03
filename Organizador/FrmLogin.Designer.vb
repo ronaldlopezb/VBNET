@@ -178,7 +178,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.LblLoginTitulo)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.Name = "FrmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
