@@ -35,6 +35,7 @@ Partial Class FrmLogin
         Me.TimerLoading = New System.Windows.Forms.Timer(Me.components)
         Me.ImgLoading = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -159,6 +160,18 @@ Partial Class FrmLogin
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrar.Location = New System.Drawing.Point(829, 9)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(23, 23)
+        Me.BtnCerrar.TabIndex = 12
+        Me.BtnCerrar.Text = "X"
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -167,6 +180,7 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
+        Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.ImgLoading)
         Me.Controls.Add(Me.PbLogin)
         Me.Controls.Add(Me.Label4)
@@ -201,4 +215,5 @@ Partial Class FrmLogin
     Friend WithEvents TimerLoading As Timer
     Friend WithEvents ImgLoading As PictureBox
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents BtnCerrar As Button
 End Class

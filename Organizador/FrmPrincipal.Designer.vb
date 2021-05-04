@@ -24,15 +24,21 @@ Partial Class FrmPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.RibbonUpDown1 = New System.Windows.Forms.RibbonUpDown()
+        Me.RibbonTab2 = New System.Windows.Forms.RibbonTab()
         Me.RibbonButton1 = New System.Windows.Forms.RibbonButton()
         Me.RibbonButton2 = New System.Windows.Forms.RibbonButton()
         Me.RibbonButton3 = New System.Windows.Forms.RibbonButton()
-        Me.RibbonTab2 = New System.Windows.Forms.RibbonTab()
         Me.RibbonOrbMenuItem1 = New System.Windows.Forms.RibbonOrbMenuItem()
         Me.RibbonOrbRecentItem1 = New System.Windows.Forms.RibbonOrbRecentItem()
         Me.RibbonOrbRecentItem2 = New System.Windows.Forms.RibbonOrbRecentItem()
         Me.RibbonButton4 = New System.Windows.Forms.RibbonButton()
         Me.RibbonOrbMenuItem2 = New System.Windows.Forms.RibbonOrbMenuItem()
+        Me.PanelMenuPrincipal = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BtnAbrirCerrar = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PanelMenuPrincipal.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'RibbonUpDown1
@@ -40,6 +46,11 @@ Partial Class FrmPrincipal
         Me.RibbonUpDown1.Name = "RibbonUpDown1"
         Me.RibbonUpDown1.TextBoxText = ""
         Me.RibbonUpDown1.TextBoxWidth = 50
+        '
+        'RibbonTab2
+        '
+        Me.RibbonTab2.Name = "RibbonTab2"
+        Me.RibbonTab2.Text = "RibbonTab2"
         '
         'RibbonButton1
         '
@@ -61,11 +72,6 @@ Partial Class FrmPrincipal
         Me.RibbonButton3.LargeImage = CType(resources.GetObject("RibbonButton3.LargeImage"), System.Drawing.Image)
         Me.RibbonButton3.Name = "RibbonButton3"
         Me.RibbonButton3.SmallImage = CType(resources.GetObject("RibbonButton3.SmallImage"), System.Drawing.Image)
-        '
-        'RibbonTab2
-        '
-        Me.RibbonTab2.Name = "RibbonTab2"
-        Me.RibbonTab2.Text = "RibbonTab2"
         '
         'RibbonOrbMenuItem1
         '
@@ -110,14 +116,57 @@ Partial Class FrmPrincipal
         Me.RibbonOrbMenuItem2.SmallImage = CType(resources.GetObject("RibbonOrbMenuItem2.SmallImage"), System.Drawing.Image)
         Me.RibbonOrbMenuItem2.Text = "RibbonOrbMenuItem2"
         '
+        'PanelMenuPrincipal
+        '
+        Me.PanelMenuPrincipal.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.PanelMenuPrincipal.Controls.Add(Me.Panel1)
+        Me.PanelMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelMenuPrincipal.Location = New System.Drawing.Point(0, 0)
+        Me.PanelMenuPrincipal.Name = "PanelMenuPrincipal"
+        Me.PanelMenuPrincipal.Size = New System.Drawing.Size(250, 857)
+        Me.PanelMenuPrincipal.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.DarkRed
+        Me.Panel2.Controls.Add(Me.BtnAbrirCerrar)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(250, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1435, 52)
+        Me.Panel2.TabIndex = 3
+        '
+        'BtnAbrirCerrar
+        '
+        Me.BtnAbrirCerrar.Location = New System.Drawing.Point(6, 3)
+        Me.BtnAbrirCerrar.Name = "BtnAbrirCerrar"
+        Me.BtnAbrirCerrar.Size = New System.Drawing.Size(75, 46)
+        Me.BtnAbrirCerrar.TabIndex = 4
+        Me.BtnAbrirCerrar.Text = "Abrir/Cerrar"
+        Me.BtnAbrirCerrar.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Info
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(250, 50)
+        Me.Panel1.TabIndex = 5
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1293, 828)
+        Me.ClientSize = New System.Drawing.Size(1685, 857)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.PanelMenuPrincipal)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
         Me.Name = "FrmPrincipal"
         Me.Text = "FrmPrincipal"
+        Me.PanelMenuPrincipal.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -132,4 +181,8 @@ Partial Class FrmPrincipal
     Friend WithEvents RibbonButton2 As RibbonButton
     Friend WithEvents RibbonButton3 As RibbonButton
     Friend WithEvents RibbonOrbMenuItem2 As RibbonOrbMenuItem
+    Friend WithEvents PanelMenuPrincipal As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents BtnAbrirCerrar As Button
+    Friend WithEvents Panel1 As Panel
 End Class

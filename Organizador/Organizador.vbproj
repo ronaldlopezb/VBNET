@@ -164,5 +164,8 @@
   <ItemGroup>
     <None Include="Resources\Spinner-1s-200px.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
