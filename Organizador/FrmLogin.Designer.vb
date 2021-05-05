@@ -36,7 +36,6 @@ Partial Class FrmLogin
         Me.ImgLoading = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.BtnCerrar = New System.Windows.Forms.Button()
-        Me.LblCoordenadas = New System.Windows.Forms.Label()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,14 +63,17 @@ Partial Class FrmLogin
         '
         'BtnIngresar
         '
-        Me.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(91, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.BtnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnIngresar.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnIngresar.ForeColor = System.Drawing.Color.White
-        Me.BtnIngresar.Location = New System.Drawing.Point(572, 321)
+        Me.BtnIngresar.Image = Global.Calendary.My.Resources.Resources.key1
+        Me.BtnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnIngresar.Location = New System.Drawing.Point(567, 310)
         Me.BtnIngresar.Name = "BtnIngresar"
-        Me.BtnIngresar.Size = New System.Drawing.Size(253, 45)
+        Me.BtnIngresar.Size = New System.Drawing.Size(257, 69)
         Me.BtnIngresar.TabIndex = 3
-        Me.BtnIngresar.Text = "Ingresar"
+        Me.BtnIngresar.Text = "Ingresar al sistema      "
         Me.BtnIngresar.UseVisualStyleBackColor = False
         '
         'LblUsuario
@@ -173,18 +175,6 @@ Partial Class FrmLogin
         Me.BtnCerrar.Text = "X"
         Me.BtnCerrar.UseVisualStyleBackColor = False
         '
-        'LblCoordenadas
-        '
-        Me.LblCoordenadas.AutoSize = True
-        Me.LblCoordenadas.BackColor = System.Drawing.Color.Transparent
-        Me.LblCoordenadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LblCoordenadas.Font = New System.Drawing.Font("Calibri", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCoordenadas.Location = New System.Drawing.Point(684, 63)
-        Me.LblCoordenadas.Name = "LblCoordenadas"
-        Me.LblCoordenadas.Size = New System.Drawing.Size(69, 45)
-        Me.LblCoordenadas.TabIndex = 13
-        Me.LblCoordenadas.Text = "0-0"
-        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,7 +183,6 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
-        Me.Controls.Add(Me.LblCoordenadas)
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.ImgLoading)
         Me.Controls.Add(Me.PbLogin)
@@ -230,5 +219,4 @@ Partial Class FrmLogin
     Friend WithEvents ImgLoading As PictureBox
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents BtnCerrar As Button
-    Friend WithEvents LblCoordenadas As Label
 End Class
