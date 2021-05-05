@@ -37,7 +37,7 @@ Partial Class FrmPrincipal
         Me.PanelMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenuPrincipal.Name = "PanelMenuPrincipal"
-        Me.PanelMenuPrincipal.Size = New System.Drawing.Size(250, 857)
+        Me.PanelMenuPrincipal.Size = New System.Drawing.Size(250, 631)
         Me.PanelMenuPrincipal.TabIndex = 1
         '
         'Panel1
@@ -56,7 +56,7 @@ Partial Class FrmPrincipal
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(250, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1370, 52)
+        Me.Panel2.Size = New System.Drawing.Size(720, 52)
         Me.Panel2.TabIndex = 3
         '
         'BtnAbrirCerrar
@@ -72,7 +72,7 @@ Partial Class FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1620, 857)
+        Me.ClientSize = New System.Drawing.Size(970, 631)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PanelMenuPrincipal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

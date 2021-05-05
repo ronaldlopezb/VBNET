@@ -21,6 +21,10 @@
         ConectarBD()
     End Sub
 
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
+    End Sub
+
     Private Sub TimerLoading_Tick(sender As Object, e As EventArgs) Handles TimerLoading.Tick
         PbLogin.Increment(1)
 
@@ -31,11 +35,48 @@
             FrmPrincipal.Show()
             Me.Close()
         End If
-
-
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
-        Me.Close()
+    Private Sub FrmLogin_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+        AgarrarFormulario(e)
     End Sub
+
+    Private Sub FrmLogin_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
+        SoltarFormulario()
+    End Sub
+
+    Private Sub FrmLogin_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+        Moverformulario(Me)
+    End Sub
+
+
+
+    Private Sub LblLoginTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles LblLoginTitulo.MouseMove
+        Moverformulario(Me)
+    End Sub
+
+    Private Sub LblLoginTitulo_MouseUp(sender As Object, e As MouseEventArgs) Handles LblLoginTitulo.MouseUp
+        SoltarFormulario()
+    End Sub
+
+    Private Sub LblLoginTitulo_MouseDown(sender As Object, e As MouseEventArgs) Handles LblLoginTitulo.MouseDown
+
+        AgarrarFormulario(e)
+    End Sub
+
+
+
+    Private Sub LblSubTitulo_MouseDown(sender As Object, e As MouseEventArgs) Handles LblSubTitulo.MouseDown
+        AgarrarFormulario(e)
+    End Sub
+
+    Private Sub LblSubTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles LblSubTitulo.MouseMove
+        Moverformulario(Me)
+    End Sub
+
+    Private Sub LblSubTitulo_MouseUp(sender As Object, e As MouseEventArgs) Handles LblSubTitulo.MouseUp
+        SoltarFormulario()
+    End Sub
+
+
 End Class

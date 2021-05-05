@@ -26,16 +26,17 @@ Partial Class FrmLogin
         Me.LblLoginTitulo = New System.Windows.Forms.Label()
         Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.BtnIngresar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblUsuario = New System.Windows.Forms.Label()
+        Me.LblClave = New System.Windows.Forms.Label()
         Me.TxtClave = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LblSubTitulo = New System.Windows.Forms.Label()
+        Me.LblAutor = New System.Windows.Forms.Label()
         Me.PbLogin = New System.Windows.Forms.ProgressBar()
         Me.TimerLoading = New System.Windows.Forms.Timer(Me.components)
         Me.ImgLoading = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.LblCoordenadas = New System.Windows.Forms.Label()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,27 +74,27 @@ Partial Class FrmLogin
         Me.BtnIngresar.Text = "Ingresar"
         Me.BtnIngresar.UseVisualStyleBackColor = False
         '
-        'Label1
+        'LblUsuario
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(659, 139)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(79, 26)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Usuario"
+        Me.LblUsuario.AutoSize = True
+        Me.LblUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.LblUsuario.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsuario.Location = New System.Drawing.Point(659, 139)
+        Me.LblUsuario.Name = "LblUsuario"
+        Me.LblUsuario.Size = New System.Drawing.Size(79, 26)
+        Me.LblUsuario.TabIndex = 4
+        Me.LblUsuario.Text = "Usuario"
         '
-        'Label2
+        'LblClave
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(643, 218)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(110, 26)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Contraseña"
+        Me.LblClave.AutoSize = True
+        Me.LblClave.BackColor = System.Drawing.Color.Transparent
+        Me.LblClave.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblClave.Location = New System.Drawing.Point(643, 218)
+        Me.LblClave.Name = "LblClave"
+        Me.LblClave.Size = New System.Drawing.Size(110, 26)
+        Me.LblClave.TabIndex = 6
+        Me.LblClave.Text = "Contraseña"
         '
         'TxtClave
         '
@@ -106,29 +107,29 @@ Partial Class FrmLogin
         Me.TxtClave.Text = "Sraonndarl817"
         Me.TxtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label3
+        'LblSubTitulo
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(73, 54)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(261, 19)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Organízate y toma el control de tu vida"
+        Me.LblSubTitulo.AutoSize = True
+        Me.LblSubTitulo.BackColor = System.Drawing.Color.Transparent
+        Me.LblSubTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LblSubTitulo.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitulo.Location = New System.Drawing.Point(73, 54)
+        Me.LblSubTitulo.Name = "LblSubTitulo"
+        Me.LblSubTitulo.Size = New System.Drawing.Size(261, 19)
+        Me.LblSubTitulo.TabIndex = 7
+        Me.LblSubTitulo.Text = "Organízate y toma el control de tu vida"
         '
-        'Label4
+        'LblAutor
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Calibri Light", 10.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(535, 499)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(319, 17)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Desarrollado por Ronald López. @2021 MasterhostPeru"
+        Me.LblAutor.AutoSize = True
+        Me.LblAutor.BackColor = System.Drawing.Color.Transparent
+        Me.LblAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LblAutor.Font = New System.Drawing.Font("Calibri Light", 10.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAutor.Location = New System.Drawing.Point(535, 499)
+        Me.LblAutor.Name = "LblAutor"
+        Me.LblAutor.Size = New System.Drawing.Size(319, 17)
+        Me.LblAutor.TabIndex = 8
+        Me.LblAutor.Text = "Desarrollado por Ronald López. @2021 MasterhostPeru"
         '
         'PbLogin
         '
@@ -172,6 +173,18 @@ Partial Class FrmLogin
         Me.BtnCerrar.Text = "X"
         Me.BtnCerrar.UseVisualStyleBackColor = False
         '
+        'LblCoordenadas
+        '
+        Me.LblCoordenadas.AutoSize = True
+        Me.LblCoordenadas.BackColor = System.Drawing.Color.Transparent
+        Me.LblCoordenadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LblCoordenadas.Font = New System.Drawing.Font("Calibri", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCoordenadas.Location = New System.Drawing.Point(684, 63)
+        Me.LblCoordenadas.Name = "LblCoordenadas"
+        Me.LblCoordenadas.Size = New System.Drawing.Size(69, 45)
+        Me.LblCoordenadas.TabIndex = 13
+        Me.LblCoordenadas.Text = "0-0"
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -180,14 +193,15 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
+        Me.Controls.Add(Me.LblCoordenadas)
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.ImgLoading)
         Me.Controls.Add(Me.PbLogin)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LblAutor)
+        Me.Controls.Add(Me.LblSubTitulo)
+        Me.Controls.Add(Me.LblClave)
         Me.Controls.Add(Me.TxtClave)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LblUsuario)
         Me.Controls.Add(Me.BtnIngresar)
         Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.LblLoginTitulo)
@@ -206,14 +220,15 @@ Partial Class FrmLogin
     Friend WithEvents LblLoginTitulo As Label
     Friend WithEvents TxtUsuario As TextBox
     Friend WithEvents BtnIngresar As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents LblUsuario As Label
+    Friend WithEvents LblClave As Label
     Friend WithEvents TxtClave As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents LblSubTitulo As Label
+    Friend WithEvents LblAutor As Label
     Friend WithEvents PbLogin As ProgressBar
     Friend WithEvents TimerLoading As Timer
     Friend WithEvents ImgLoading As PictureBox
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents BtnCerrar As Button
+    Friend WithEvents LblCoordenadas As Label
 End Class
