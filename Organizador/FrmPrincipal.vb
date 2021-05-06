@@ -6,10 +6,10 @@
     End Sub
 
     Private Sub BtnAbrirCerrar_Click(sender As Object, e As EventArgs) Handles BtnAbrirCerrar.Click
-        If (PanelMenuPrincipal.Width = 250) Then
-            PanelMenuPrincipal.Width = 70
+        If (PanelMenuPrincipal.Width = 230) Then
+            PanelMenuPrincipal.Width = 50
         Else
-            PanelMenuPrincipal.Width = 250
+            PanelMenuPrincipal.Width = 230
         End If
     End Sub
 
