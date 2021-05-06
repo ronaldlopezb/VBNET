@@ -37,7 +37,7 @@ Partial Class FrmPrincipal
         Me.PanelMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.PanelMenuPrincipal.Name = "PanelMenuPrincipal"
-        Me.PanelMenuPrincipal.Size = New System.Drawing.Size(250, 631)
+        Me.PanelMenuPrincipal.Size = New System.Drawing.Size(230, 631)
         Me.PanelMenuPrincipal.TabIndex = 1
         '
         'Panel1
@@ -46,7 +46,7 @@ Partial Class FrmPrincipal
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(250, 50)
+        Me.Panel1.Size = New System.Drawing.Size(230, 50)
         Me.Panel1.TabIndex = 5
         '
         'Panel2
@@ -54,9 +54,9 @@ Partial Class FrmPrincipal
         Me.Panel2.BackColor = System.Drawing.Color.DarkRed
         Me.Panel2.Controls.Add(Me.BtnAbrirCerrar)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(250, 0)
+        Me.Panel2.Location = New System.Drawing.Point(230, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(720, 52)
+        Me.Panel2.Size = New System.Drawing.Size(740, 52)
         Me.Panel2.TabIndex = 3
         '
         'BtnAbrirCerrar
