@@ -138,37 +138,28 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\moinetux_isb_tux.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calendar-page-close-up-on-blue-surface.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\back01.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\back02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loading-login.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Spinner-1s-200px.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\restaurar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\key.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\key.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\key1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnCerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnMinimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnMaximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnRestaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnMaximizar1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

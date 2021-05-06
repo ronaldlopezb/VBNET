@@ -79,10 +79,10 @@
     End Sub
 
     Private Sub BtnIngresar_MouseHover(sender As Object, e As EventArgs) Handles BtnIngresar.MouseHover
-        BtnIngresar.BackColor = ColorTranslator.FromHtml("#FFC393")
+        BtnIngresar.BackColor = ColorTranslator.FromHtml("#0078D7")
     End Sub
 
     Private Sub BtnIngresar_MouseLeave(sender As Object, e As EventArgs) Handles BtnIngresar.MouseLeave
-        BtnIngresar.BackColor = ColorTranslator.FromHtml("#0078D7")
+        BtnIngresar.BackColor = ColorTranslator.FromHtml("#456BD3")
     End Sub
 End Class

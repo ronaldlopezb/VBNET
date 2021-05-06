@@ -63,7 +63,7 @@ Partial Class FrmLogin
         '
         'BtnIngresar
         '
-        Me.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.BtnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnIngresar.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnIngresar.ForeColor = System.Drawing.Color.White

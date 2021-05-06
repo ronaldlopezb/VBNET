@@ -32,5 +32,37 @@
         'If Arrastre Then Me.Location = Me.PointToScreen(New Point(Me.MousePosition.X - Me.Location.X - ex - 8, Me.MousePosition.Y - Me.Location.Y - ey - 60))
     End Sub
 
+    Private Sub PanelSuperior_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelSuperior.MouseDown
+        AgarrarFormulario(e)
+    End Sub
+
+    Private Sub PanelSuperior_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelSuperior.MouseMove
+        Moverformulario(Me)
+    End Sub
+
+    Private Sub PanelSuperior_MouseUp(sender As Object, e As MouseEventArgs) Handles PanelSuperior.MouseUp
+        SoltarFormulario()
+    End Sub
+
+    Private Sub BtnCerrarVentana_Click(sender As Object, e As EventArgs) Handles BtnCerrarVentana.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BtnMaximizarVentana_Click(sender As Object, e As EventArgs) Handles BtnMaximizarVentana.Click
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub BtnRestaurarVentana_Click(sender As Object, e As EventArgs) Handles BtnRestaurarVentana.Click
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub LblLoginTitulo_Click(sender As Object, e As EventArgs) Handles LblLoginTitulo.Click
+
+    End Sub
+
+    Private Sub BtnMinimizarVentana_Click(sender As Object, e As EventArgs) Handles BtnMinimizarVentana.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
 
 End Class
