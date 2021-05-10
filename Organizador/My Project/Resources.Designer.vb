@@ -73,36 +73,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property BtnCerrar() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BtnCerrar", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property BtnMaximizar() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BtnMaximizar", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property BtnMinimizar() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BtnMinimizar", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property key1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("key1", resourceCulture)
