@@ -29,9 +29,13 @@ Partial Class FrmPrincipal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuMoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.BunifuMetroTextbox1 = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PanelSuperior.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
@@ -84,12 +88,49 @@ Partial Class FrmPrincipal
         Me.BunifuMoverFormulario.TargetControl = Me.PanelSuperior
         Me.BunifuMoverFormulario.Vertical = True
         '
+        'BunifuMetroTextbox1
+        '
+        Me.BunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Blue
+        Me.BunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue
+        Me.BunifuMetroTextbox1.BorderThickness = 1
+        Me.BunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.BunifuMetroTextbox1.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BunifuMetroTextbox1.isPassword = False
+        Me.BunifuMetroTextbox1.Location = New System.Drawing.Point(19, 65)
+        Me.BunifuMetroTextbox1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BunifuMetroTextbox1.Name = "BunifuMetroTextbox1"
+        Me.BunifuMetroTextbox1.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
+        Me.BunifuMetroTextbox1.Size = New System.Drawing.Size(416, 40)
+        Me.BunifuMetroTextbox1.TabIndex = 4
+        Me.BunifuMetroTextbox1.Text = "Buscar..."
+        Me.BunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(26, 70)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
+        '
+        'BunifuElipse1
+        '
+        Me.BunifuElipse1.ElipseRadius = 7
+        Me.BunifuElipse1.TargetControl = Me
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(950, 600)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.BunifuMetroTextbox1)
         Me.Controls.Add(Me.PanelSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
@@ -100,6 +141,7 @@ Partial Class FrmPrincipal
         Me.PanelSuperior.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -108,4 +150,7 @@ Partial Class FrmPrincipal
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BunifuMoverFormulario As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents BunifuMetroTextbox1 As Bunifu.Framework.UI.BunifuMetroTextbox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
 End Class

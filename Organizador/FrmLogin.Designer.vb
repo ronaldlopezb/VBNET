@@ -23,20 +23,29 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.LblLoginTitulo = New System.Windows.Forms.Label()
-        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.BtnIngresar = New System.Windows.Forms.Button()
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.LblClave = New System.Windows.Forms.Label()
-        Me.TxtClave = New System.Windows.Forms.TextBox()
         Me.LblSubTitulo = New System.Windows.Forms.Label()
         Me.LblAutor = New System.Windows.Forms.Label()
         Me.PbLogin = New System.Windows.Forms.ProgressBar()
         Me.TimerLoading = New System.Windows.Forms.Timer(Me.components)
-        Me.ImgLoading = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.MoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.MoverFormularioTitulo = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.MoverFormularioSubTitulo = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.BunifuBorde = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.TxtUsuario = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.TxtClave = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.ImgLoading = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblLoginTitulo
@@ -50,16 +59,6 @@ Partial Class FrmLogin
         Me.LblLoginTitulo.Size = New System.Drawing.Size(383, 45)
         Me.LblLoginTitulo.TabIndex = 0
         Me.LblLoginTitulo.Text = "Bienvenido a Calendary"
-        '
-        'TxtUsuario
-        '
-        Me.TxtUsuario.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsuario.Location = New System.Drawing.Point(583, 169)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(230, 27)
-        Me.TxtUsuario.TabIndex = 1
-        Me.TxtUsuario.Text = "ronaldlopezb"
-        Me.TxtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnIngresar
         '
@@ -98,17 +97,6 @@ Partial Class FrmLogin
         Me.LblClave.TabIndex = 6
         Me.LblClave.Text = "Contraseña"
         '
-        'TxtClave
-        '
-        Me.TxtClave.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtClave.Location = New System.Drawing.Point(583, 247)
-        Me.TxtClave.Name = "TxtClave"
-        Me.TxtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtClave.Size = New System.Drawing.Size(230, 27)
-        Me.TxtClave.TabIndex = 2
-        Me.TxtClave.Text = "Sraonndarl817"
-        Me.TxtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'LblSubTitulo
         '
         Me.LblSubTitulo.AutoSize = True
@@ -145,18 +133,6 @@ Partial Class FrmLogin
         'TimerLoading
         '
         '
-        'ImgLoading
-        '
-        Me.ImgLoading.BackColor = System.Drawing.Color.Transparent
-        Me.ImgLoading.Image = Global.Calendary.My.Resources.Resources.Spinner_1s_200px
-        Me.ImgLoading.Location = New System.Drawing.Point(648, 385)
-        Me.ImgLoading.Name = "ImgLoading"
-        Me.ImgLoading.Size = New System.Drawing.Size(100, 100)
-        Me.ImgLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ImgLoading.TabIndex = 11
-        Me.ImgLoading.TabStop = False
-        Me.ImgLoading.Visible = False
-        '
         'ImageList1
         '
         Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
@@ -175,6 +151,88 @@ Partial Class FrmLogin
         Me.BtnCerrar.Text = "X"
         Me.BtnCerrar.UseVisualStyleBackColor = False
         '
+        'MoverFormulario
+        '
+        Me.MoverFormulario.Fixed = True
+        Me.MoverFormulario.Horizontal = True
+        Me.MoverFormulario.TargetControl = Me
+        Me.MoverFormulario.Vertical = True
+        '
+        'MoverFormularioTitulo
+        '
+        Me.MoverFormularioTitulo.Fixed = True
+        Me.MoverFormularioTitulo.Horizontal = True
+        Me.MoverFormularioTitulo.TargetControl = Me.LblLoginTitulo
+        Me.MoverFormularioTitulo.Vertical = True
+        '
+        'MoverFormularioSubTitulo
+        '
+        Me.MoverFormularioSubTitulo.Fixed = True
+        Me.MoverFormularioSubTitulo.Horizontal = True
+        Me.MoverFormularioSubTitulo.TargetControl = Me.LblSubTitulo
+        Me.MoverFormularioSubTitulo.Vertical = True
+        '
+        'BunifuBorde
+        '
+        Me.BunifuBorde.ElipseRadius = 7
+        Me.BunifuBorde.TargetControl = Me
+        '
+        'TxtUsuario
+        '
+        Me.TxtUsuario.BorderColor = System.Drawing.Color.SeaGreen
+        Me.TxtUsuario.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsuario.Location = New System.Drawing.Point(611, 168)
+        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(202, 30)
+        Me.TxtUsuario.TabIndex = 13
+        Me.TxtUsuario.Text = "Ronald"
+        '
+        'TxtClave
+        '
+        Me.TxtClave.BorderColor = System.Drawing.Color.SeaGreen
+        Me.TxtClave.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtClave.Location = New System.Drawing.Point(611, 247)
+        Me.TxtClave.Name = "TxtClave"
+        Me.TxtClave.Size = New System.Drawing.Size(202, 30)
+        Me.TxtClave.TabIndex = 14
+        Me.TxtClave.UseSystemPasswordChar = True
+        '
+        'ImgLoading
+        '
+        Me.ImgLoading.BackColor = System.Drawing.Color.Transparent
+        Me.ImgLoading.Image = Global.Calendary.My.Resources.Resources.Spinner_1s_200px
+        Me.ImgLoading.Location = New System.Drawing.Point(648, 385)
+        Me.ImgLoading.Name = "ImgLoading"
+        Me.ImgLoading.Size = New System.Drawing.Size(100, 100)
+        Me.ImgLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ImgLoading.TabIndex = 11
+        Me.ImgLoading.TabStop = False
+        Me.ImgLoading.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(582, 168)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(583, 247)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 16
+        Me.PictureBox2.TabStop = False
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -183,16 +241,18 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.TxtClave)
+        Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.ImgLoading)
         Me.Controls.Add(Me.PbLogin)
         Me.Controls.Add(Me.LblAutor)
         Me.Controls.Add(Me.LblSubTitulo)
         Me.Controls.Add(Me.LblClave)
-        Me.Controls.Add(Me.TxtClave)
         Me.Controls.Add(Me.LblUsuario)
         Me.Controls.Add(Me.BtnIngresar)
-        Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.LblLoginTitulo)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -201,22 +261,30 @@ Partial Class FrmLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calendary - Identificación de Usuario"
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents LblLoginTitulo As Label
-    Friend WithEvents TxtUsuario As TextBox
     Friend WithEvents BtnIngresar As Button
     Friend WithEvents LblUsuario As Label
     Friend WithEvents LblClave As Label
-    Friend WithEvents TxtClave As TextBox
     Friend WithEvents LblSubTitulo As Label
     Friend WithEvents LblAutor As Label
     Friend WithEvents PbLogin As ProgressBar
     Friend WithEvents TimerLoading As Timer
-    Friend WithEvents ImgLoading As PictureBox
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents BtnCerrar As Button
+    Friend WithEvents MoverFormulario As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents MoverFormularioTitulo As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents MoverFormularioSubTitulo As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents BunifuBorde As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents TxtClave As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ImgLoading As PictureBox
+    Public WithEvents TxtUsuario As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
