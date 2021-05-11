@@ -25,23 +25,26 @@ Partial Class FrmPrincipal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.pbCerrar = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuMoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuMetroTextbox1 = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BunifuBordeForm = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.PanelLateralPrincipal = New System.Windows.Forms.Panel()
+        Me.pbSideBar = New System.Windows.Forms.PictureBox()
         Me.PanelSuperior.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
         '
         Me.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.PanelSuperior.Controls.Add(Me.PictureBox2)
+        Me.PanelSuperior.Controls.Add(Me.pbCerrar)
         Me.PanelSuperior.Controls.Add(Me.Label1)
         Me.PanelSuperior.Controls.Add(Me.PictureBox1)
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
@@ -50,15 +53,16 @@ Partial Class FrmPrincipal
         Me.PanelSuperior.Size = New System.Drawing.Size(950, 50)
         Me.PanelSuperior.TabIndex = 3
         '
-        'PictureBox2
+        'pbCerrar
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(908, 5)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
+        Me.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbCerrar.Image = CType(resources.GetObject("pbCerrar.Image"), System.Drawing.Image)
+        Me.pbCerrar.Location = New System.Drawing.Point(908, 5)
+        Me.pbCerrar.Name = "pbCerrar"
+        Me.pbCerrar.Size = New System.Drawing.Size(30, 30)
+        Me.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbCerrar.TabIndex = 2
+        Me.pbCerrar.TabStop = False
         '
         'Label1
         '
@@ -98,7 +102,7 @@ Partial Class FrmPrincipal
         Me.BunifuMetroTextbox1.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BunifuMetroTextbox1.isPassword = False
-        Me.BunifuMetroTextbox1.Location = New System.Drawing.Point(19, 65)
+        Me.BunifuMetroTextbox1.Location = New System.Drawing.Point(494, 70)
         Me.BunifuMetroTextbox1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.BunifuMetroTextbox1.Name = "BunifuMetroTextbox1"
         Me.BunifuMetroTextbox1.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
@@ -110,17 +114,37 @@ Partial Class FrmPrincipal
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(26, 70)
+        Me.PictureBox3.Location = New System.Drawing.Point(501, 75)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 3
         Me.PictureBox3.TabStop = False
         '
-        'BunifuElipse1
+        'BunifuBordeForm
         '
-        Me.BunifuElipse1.ElipseRadius = 7
-        Me.BunifuElipse1.TargetControl = Me
+        Me.BunifuBordeForm.ElipseRadius = 7
+        Me.BunifuBordeForm.TargetControl = Me
+        '
+        'PanelLateralPrincipal
+        '
+        Me.PanelLateralPrincipal.BackColor = System.Drawing.Color.MistyRose
+        Me.PanelLateralPrincipal.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelLateralPrincipal.Location = New System.Drawing.Point(0, 50)
+        Me.PanelLateralPrincipal.Name = "PanelLateralPrincipal"
+        Me.PanelLateralPrincipal.Size = New System.Drawing.Size(70, 550)
+        Me.PanelLateralPrincipal.TabIndex = 5
+        '
+        'pbSideBar
+        '
+        Me.pbSideBar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbSideBar.Image = CType(resources.GetObject("pbSideBar.Image"), System.Drawing.Image)
+        Me.pbSideBar.Location = New System.Drawing.Point(54, 56)
+        Me.pbSideBar.Name = "pbSideBar"
+        Me.pbSideBar.Size = New System.Drawing.Size(30, 30)
+        Me.pbSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSideBar.TabIndex = 6
+        Me.pbSideBar.TabStop = False
         '
         'FrmPrincipal
         '
@@ -129,6 +153,8 @@ Partial Class FrmPrincipal
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(950, 600)
         Me.ControlBox = False
+        Me.Controls.Add(Me.pbSideBar)
+        Me.Controls.Add(Me.PanelLateralPrincipal)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.BunifuMetroTextbox1)
         Me.Controls.Add(Me.PanelSuperior)
@@ -139,18 +165,21 @@ Partial Class FrmPrincipal
         Me.Text = "FrmPrincipal"
         Me.PanelSuperior.ResumeLayout(False)
         Me.PanelSuperior.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents PanelSuperior As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents pbCerrar As PictureBox
     Friend WithEvents BunifuMoverFormulario As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents BunifuMetroTextbox1 As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents BunifuBordeForm As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents PanelLateralPrincipal As Panel
+    Friend WithEvents pbSideBar As PictureBox
 End Class

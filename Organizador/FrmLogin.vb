@@ -38,4 +38,8 @@
             MsgBox("Lo sentimos, las credenciales ingresadas no son correctas. ", vbInformation, "Error - Identificación")
         End If
     End Sub
+
+    Private Sub LblClave_Click(sender As Object, e As EventArgs) Handles LblClave.Click
+
+    End Sub
 End Class

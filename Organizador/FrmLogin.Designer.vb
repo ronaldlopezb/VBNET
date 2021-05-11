@@ -23,7 +23,6 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.LblLoginTitulo = New System.Windows.Forms.Label()
         Me.BtnIngresar = New System.Windows.Forms.Button()
         Me.LblUsuario = New System.Windows.Forms.Label()
@@ -32,7 +31,6 @@ Partial Class FrmLogin
         Me.LblAutor = New System.Windows.Forms.Label()
         Me.PbLogin = New System.Windows.Forms.ProgressBar()
         Me.TimerLoading = New System.Windows.Forms.Timer(Me.components)
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.MoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.MoverFormularioTitulo = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
@@ -41,11 +39,7 @@ Partial Class FrmLogin
         Me.TxtUsuario = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.TxtClave = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.ImgLoading = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblLoginTitulo
@@ -80,7 +74,7 @@ Partial Class FrmLogin
         Me.LblUsuario.AutoSize = True
         Me.LblUsuario.BackColor = System.Drawing.Color.Transparent
         Me.LblUsuario.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUsuario.Location = New System.Drawing.Point(659, 139)
+        Me.LblUsuario.Location = New System.Drawing.Point(651, 139)
         Me.LblUsuario.Name = "LblUsuario"
         Me.LblUsuario.Size = New System.Drawing.Size(79, 26)
         Me.LblUsuario.TabIndex = 4
@@ -91,7 +85,7 @@ Partial Class FrmLogin
         Me.LblClave.AutoSize = True
         Me.LblClave.BackColor = System.Drawing.Color.Transparent
         Me.LblClave.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblClave.Location = New System.Drawing.Point(643, 218)
+        Me.LblClave.Location = New System.Drawing.Point(635, 218)
         Me.LblClave.Name = "LblClave"
         Me.LblClave.Size = New System.Drawing.Size(110, 26)
         Me.LblClave.TabIndex = 6
@@ -132,12 +126,6 @@ Partial Class FrmLogin
         '
         'TimerLoading
         '
-        '
-        'ImageList1
-        '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
         'BtnCerrar
         '
@@ -181,21 +169,22 @@ Partial Class FrmLogin
         '
         Me.TxtUsuario.BorderColor = System.Drawing.Color.SeaGreen
         Me.TxtUsuario.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsuario.Location = New System.Drawing.Point(611, 168)
+        Me.TxtUsuario.Location = New System.Drawing.Point(567, 168)
         Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
         Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(202, 30)
+        Me.TxtUsuario.Size = New System.Drawing.Size(246, 30)
         Me.TxtUsuario.TabIndex = 13
-        Me.TxtUsuario.Text = "Ronald"
+        Me.TxtUsuario.Text = "RonaldLopezB"
         '
         'TxtClave
         '
         Me.TxtClave.BorderColor = System.Drawing.Color.SeaGreen
         Me.TxtClave.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtClave.Location = New System.Drawing.Point(611, 247)
+        Me.TxtClave.Location = New System.Drawing.Point(567, 247)
         Me.TxtClave.Name = "TxtClave"
-        Me.TxtClave.Size = New System.Drawing.Size(202, 30)
+        Me.TxtClave.Size = New System.Drawing.Size(246, 30)
         Me.TxtClave.TabIndex = 14
+        Me.TxtClave.Text = "Sraonndarl817"
         Me.TxtClave.UseSystemPasswordChar = True
         '
         'ImgLoading
@@ -210,29 +199,6 @@ Partial Class FrmLogin
         Me.ImgLoading.TabStop = False
         Me.ImgLoading.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(582, 168)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 15
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(583, 247)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 16
-        Me.PictureBox2.TabStop = False
-        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -241,8 +207,6 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TxtClave)
         Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.BtnCerrar)
@@ -261,8 +225,6 @@ Partial Class FrmLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calendary - Identificación de Usuario"
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -276,15 +238,12 @@ Partial Class FrmLogin
     Friend WithEvents LblAutor As Label
     Friend WithEvents PbLogin As ProgressBar
     Friend WithEvents TimerLoading As Timer
-    Friend WithEvents ImageList1 As ImageList
     Friend WithEvents BtnCerrar As Button
     Friend WithEvents MoverFormulario As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents MoverFormularioTitulo As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents MoverFormularioSubTitulo As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents BunifuBorde As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents TxtClave As WindowsFormsControlLibrary1.BunifuCustomTextbox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ImgLoading As PictureBox
     Public WithEvents TxtUsuario As WindowsFormsControlLibrary1.BunifuCustomTextbox
-    Friend WithEvents PictureBox2 As PictureBox
 End Class
