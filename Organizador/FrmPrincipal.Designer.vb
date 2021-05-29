@@ -25,27 +25,40 @@ Partial Class FrmPrincipal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.PanelSuperior = New System.Windows.Forms.Panel()
+        Me.pbSideBar = New System.Windows.Forms.PictureBox()
+        Me.pbRestaurar = New System.Windows.Forms.PictureBox()
+        Me.pbMinimizar = New System.Windows.Forms.PictureBox()
+        Me.pbMaximizar = New System.Windows.Forms.PictureBox()
         Me.pbCerrar = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblTitulo = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuMoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuMetroTextbox1 = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BunifuBordeForm = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PanelLateralPrincipal = New System.Windows.Forms.Panel()
-        Me.pbSideBar = New System.Windows.Forms.PictureBox()
+        Me.BunifuTextbox1 = New Bunifu.Framework.UI.BunifuTextbox()
+        Me.BunifuCustomTextbox1 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.BunifuMaterialTextbox1 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.PanelSuperior.SuspendLayout()
+        CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelSuperior
         '
         Me.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.PanelSuperior.Controls.Add(Me.pbSideBar)
+        Me.PanelSuperior.Controls.Add(Me.pbRestaurar)
+        Me.PanelSuperior.Controls.Add(Me.pbMinimizar)
+        Me.PanelSuperior.Controls.Add(Me.pbMaximizar)
         Me.PanelSuperior.Controls.Add(Me.pbCerrar)
-        Me.PanelSuperior.Controls.Add(Me.Label1)
+        Me.PanelSuperior.Controls.Add(Me.LblTitulo)
         Me.PanelSuperior.Controls.Add(Me.PictureBox1)
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
@@ -53,8 +66,56 @@ Partial Class FrmPrincipal
         Me.PanelSuperior.Size = New System.Drawing.Size(950, 50)
         Me.PanelSuperior.TabIndex = 3
         '
+        'pbSideBar
+        '
+        Me.pbSideBar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbSideBar.Image = CType(resources.GetObject("pbSideBar.Image"), System.Drawing.Image)
+        Me.pbSideBar.Location = New System.Drawing.Point(180, 12)
+        Me.pbSideBar.Name = "pbSideBar"
+        Me.pbSideBar.Size = New System.Drawing.Size(30, 30)
+        Me.pbSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbSideBar.TabIndex = 6
+        Me.pbSideBar.TabStop = False
+        '
+        'pbRestaurar
+        '
+        Me.pbRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbRestaurar.Image = CType(resources.GetObject("pbRestaurar.Image"), System.Drawing.Image)
+        Me.pbRestaurar.Location = New System.Drawing.Point(872, 5)
+        Me.pbRestaurar.Name = "pbRestaurar"
+        Me.pbRestaurar.Size = New System.Drawing.Size(30, 30)
+        Me.pbRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbRestaurar.TabIndex = 5
+        Me.pbRestaurar.TabStop = False
+        '
+        'pbMinimizar
+        '
+        Me.pbMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbMinimizar.Image = CType(resources.GetObject("pbMinimizar.Image"), System.Drawing.Image)
+        Me.pbMinimizar.Location = New System.Drawing.Point(836, 5)
+        Me.pbMinimizar.Name = "pbMinimizar"
+        Me.pbMinimizar.Size = New System.Drawing.Size(30, 30)
+        Me.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbMinimizar.TabIndex = 4
+        Me.pbMinimizar.TabStop = False
+        '
+        'pbMaximizar
+        '
+        Me.pbMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbMaximizar.Image = CType(resources.GetObject("pbMaximizar.Image"), System.Drawing.Image)
+        Me.pbMaximizar.Location = New System.Drawing.Point(872, 5)
+        Me.pbMaximizar.Name = "pbMaximizar"
+        Me.pbMaximizar.Size = New System.Drawing.Size(30, 30)
+        Me.pbMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbMaximizar.TabIndex = 3
+        Me.pbMaximizar.TabStop = False
+        '
         'pbCerrar
         '
+        Me.pbCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbCerrar.Image = CType(resources.GetObject("pbCerrar.Image"), System.Drawing.Image)
         Me.pbCerrar.Location = New System.Drawing.Point(908, 5)
@@ -64,16 +125,16 @@ Partial Class FrmPrincipal
         Me.pbCerrar.TabIndex = 2
         Me.pbCerrar.TabStop = False
         '
-        'Label1
+        'LblTitulo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(67, 14)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 26)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Calendary"
+        Me.LblTitulo.AutoSize = True
+        Me.LblTitulo.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitulo.ForeColor = System.Drawing.Color.White
+        Me.LblTitulo.Location = New System.Drawing.Point(58, 9)
+        Me.LblTitulo.Name = "LblTitulo"
+        Me.LblTitulo.Size = New System.Drawing.Size(116, 34)
+        Me.LblTitulo.TabIndex = 1
+        Me.LblTitulo.Text = "Calendary"
         '
         'PictureBox1
         '
@@ -135,16 +196,51 @@ Partial Class FrmPrincipal
         Me.PanelLateralPrincipal.Size = New System.Drawing.Size(70, 550)
         Me.PanelLateralPrincipal.TabIndex = 5
         '
-        'pbSideBar
+        'BunifuTextbox1
         '
-        Me.pbSideBar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pbSideBar.Image = CType(resources.GetObject("pbSideBar.Image"), System.Drawing.Image)
-        Me.pbSideBar.Location = New System.Drawing.Point(54, 56)
-        Me.pbSideBar.Name = "pbSideBar"
-        Me.pbSideBar.Size = New System.Drawing.Size(30, 30)
-        Me.pbSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbSideBar.TabIndex = 6
-        Me.pbSideBar.TabStop = False
+        Me.BunifuTextbox1.BackColor = System.Drawing.Color.White
+        Me.BunifuTextbox1.BackgroundImage = CType(resources.GetObject("BunifuTextbox1.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuTextbox1.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BunifuTextbox1.Icon = CType(resources.GetObject("BunifuTextbox1.Icon"), System.Drawing.Image)
+        Me.BunifuTextbox1.Location = New System.Drawing.Point(94, 132)
+        Me.BunifuTextbox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.BunifuTextbox1.Name = "BunifuTextbox1"
+        Me.BunifuTextbox1.Size = New System.Drawing.Size(417, 49)
+        Me.BunifuTextbox1.TabIndex = 6
+        Me.BunifuTextbox1.text = "Buscar..."
+        '
+        'BunifuCustomTextbox1
+        '
+        Me.BunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen
+        Me.BunifuCustomTextbox1.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomTextbox1.Location = New System.Drawing.Point(569, 151)
+        Me.BunifuCustomTextbox1.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
+        Me.BunifuCustomTextbox1.Name = "BunifuCustomTextbox1"
+        Me.BunifuCustomTextbox1.Size = New System.Drawing.Size(217, 30)
+        Me.BunifuCustomTextbox1.TabIndex = 7
+        Me.BunifuCustomTextbox1.Text = "Buscar..."
+        '
+        'BunifuMaterialTextbox1
+        '
+        Me.BunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.BunifuMaterialTextbox1.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty
+        Me.BunifuMaterialTextbox1.HintText = ""
+        Me.BunifuMaterialTextbox1.isPassword = False
+        Me.BunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue
+        Me.BunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue
+        Me.BunifuMaterialTextbox1.LineThickness = 5
+        Me.BunifuMaterialTextbox1.Location = New System.Drawing.Point(304, 290)
+        Me.BunifuMaterialTextbox1.Margin = New System.Windows.Forms.Padding(30, 1, 1, 1)
+        Me.BunifuMaterialTextbox1.Name = "BunifuMaterialTextbox1"
+        Me.BunifuMaterialTextbox1.Size = New System.Drawing.Size(416, 39)
+        Me.BunifuMaterialTextbox1.TabIndex = 8
+        Me.BunifuMaterialTextbox1.Text = "Buscar..."
+        Me.BunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'FrmPrincipal
         '
@@ -153,11 +249,14 @@ Partial Class FrmPrincipal
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(950, 600)
         Me.ControlBox = False
-        Me.Controls.Add(Me.pbSideBar)
+        Me.Controls.Add(Me.BunifuMaterialTextbox1)
+        Me.Controls.Add(Me.BunifuCustomTextbox1)
+        Me.Controls.Add(Me.BunifuTextbox1)
         Me.Controls.Add(Me.PanelLateralPrincipal)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.BunifuMetroTextbox1)
         Me.Controls.Add(Me.PanelSuperior)
+        Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
         Me.MinimumSize = New System.Drawing.Size(950, 600)
@@ -165,16 +264,20 @@ Partial Class FrmPrincipal
         Me.Text = "FrmPrincipal"
         Me.PanelSuperior.ResumeLayout(False)
         Me.PanelSuperior.PerformLayout()
+        CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PanelSuperior As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblTitulo As Label
     Friend WithEvents pbCerrar As PictureBox
     Friend WithEvents BunifuMoverFormulario As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents BunifuMetroTextbox1 As Bunifu.Framework.UI.BunifuMetroTextbox
@@ -182,4 +285,10 @@ Partial Class FrmPrincipal
     Friend WithEvents BunifuBordeForm As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents PanelLateralPrincipal As Panel
     Friend WithEvents pbSideBar As PictureBox
+    Friend WithEvents pbRestaurar As PictureBox
+    Friend WithEvents pbMinimizar As PictureBox
+    Friend WithEvents pbMaximizar As PictureBox
+    Friend WithEvents BunifuTextbox1 As Bunifu.Framework.UI.BunifuTextbox
+    Friend WithEvents BunifuMaterialTextbox1 As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents BunifuCustomTextbox1 As WindowsFormsControlLibrary1.BunifuCustomTextbox
 End Class

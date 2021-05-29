@@ -108,10 +108,10 @@ Partial Class FrmLogin
         Me.LblAutor.AutoSize = True
         Me.LblAutor.BackColor = System.Drawing.Color.Transparent
         Me.LblAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LblAutor.Font = New System.Drawing.Font("Calibri Light", 10.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAutor.Location = New System.Drawing.Point(535, 499)
+        Me.LblAutor.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAutor.Location = New System.Drawing.Point(500, 499)
         Me.LblAutor.Name = "LblAutor"
-        Me.LblAutor.Size = New System.Drawing.Size(319, 17)
+        Me.LblAutor.Size = New System.Drawing.Size(361, 23)
         Me.LblAutor.TabIndex = 8
         Me.LblAutor.Text = "Desarrollado por Ronald López. @2021 MasterhostPeru"
         '
