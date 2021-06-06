@@ -1,9 +1,8 @@
 ﻿Public Class FrmLogin
 
-
-
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConectarBD()
+        LblAutor.Text = "Desarrollado por Ronald López. @" + (Year(Date.Now.Date)).ToString + " MasterhostPeru"
     End Sub
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
@@ -39,7 +38,7 @@
         End If
     End Sub
 
-    Private Sub LblClave_Click(sender As Object, e As EventArgs) Handles LblClave.Click
-
+    Private Sub BtnMinimizar_Click(sender As Object, e As EventArgs) Handles BtnMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 End Class

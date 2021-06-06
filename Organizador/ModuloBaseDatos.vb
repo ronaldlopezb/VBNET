@@ -52,7 +52,7 @@ Module ModuloBaseDatos
 
         'PASO 02: Crear la Consulta SQL
         sql = ""
-        sql = "Select IdUsuario, Usuario, Clave from TablaUsuario where Usuario='" + UsuarioVariable + "' and Clave='" + ClaveVariable + "'"
+        sql = "Select IdUsuario, Usuario, Clave, Nombres from TablaUsuario where Usuario='" + UsuarioVariable + "' and Clave='" + ClaveVariable + "'"
         'MsgBox(sql)
 
         'PASO 03: Le damos el SQL al CMD
@@ -63,10 +63,11 @@ Module ModuloBaseDatos
             dr = Cmd.ExecuteReader()
             ''Verificar si trajo por lo menos 1 registro.
             If dr.HasRows Then
+                dr.Read()
+                UserName = dr(3).ToString
+                UserInitial = Left(UserName, 1)
                 dr.Close()
                 isLogin = True
-                'FrmPrincipal.Show()
-                'FrmLogin.Hide()
             Else
                 dr.Close()
                 isLogin = False

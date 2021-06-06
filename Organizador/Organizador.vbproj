@@ -79,17 +79,59 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmLogin.vb">
+    <Compile Include="Formularios\Calendario\FrmCalendario.Designer.vb">
+      <DependentUpon>FrmCalendario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Calendario\FrmCalendario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.vb">
+    <Compile Include="Formularios\Configuracion\FrmConfiguracion.Designer.vb">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Configuracion\FrmConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contactos\FrmContactos.Designer.vb">
+      <DependentUpon>FrmContactos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Contactos\FrmContactos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Enlaces\FrmEnlaces.Designer.vb">
+      <DependentUpon>FrmEnlaces.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Enlaces\FrmEnlaces.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPrincipal.Designer.vb">
+    <Compile Include="Formularios\FrmNotificaciones.Designer.vb">
+      <DependentUpon>FrmNotificaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmNotificaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Notas\FrmNotas.Designer.vb">
+      <DependentUpon>FrmNotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Notas\FrmNotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipal.Designer.vb">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmPrincipal.vb">
+    <Compile Include="Formularios\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Proyectos\FrmProyectos.Designer.vb">
+      <DependentUpon>FrmProyectos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Proyectos\FrmProyectos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuloBaseDatos.vb" />
@@ -113,11 +155,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="Formularios\Calendario\FrmCalendario.resx">
+      <DependentUpon>FrmCalendario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Configuracion\FrmConfiguracion.resx">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contactos\FrmContactos.resx">
+      <DependentUpon>FrmContactos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Enlaces\FrmEnlaces.resx">
+      <DependentUpon>FrmEnlaces.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
+    <EmbeddedResource Include="Formularios\FrmNotificaciones.resx">
+      <DependentUpon>FrmNotificaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Notas\FrmNotas.resx">
+      <DependentUpon>FrmNotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Proyectos\FrmProyectos.resx">
+      <DependentUpon>FrmProyectos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

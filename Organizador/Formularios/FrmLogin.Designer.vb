@@ -39,6 +39,7 @@ Partial Class FrmLogin
         Me.TxtUsuario = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.TxtClave = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.ImgLoading = New System.Windows.Forms.PictureBox()
+        Me.BtnMinimizar = New System.Windows.Forms.Button()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,25 +59,24 @@ Partial Class FrmLogin
         '
         Me.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.BtnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnIngresar.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIngresar.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnIngresar.ForeColor = System.Drawing.Color.White
-        Me.BtnIngresar.Image = Global.Calendary.My.Resources.Resources.key1
         Me.BtnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnIngresar.Location = New System.Drawing.Point(567, 310)
         Me.BtnIngresar.Name = "BtnIngresar"
-        Me.BtnIngresar.Size = New System.Drawing.Size(257, 69)
+        Me.BtnIngresar.Size = New System.Drawing.Size(257, 48)
         Me.BtnIngresar.TabIndex = 3
-        Me.BtnIngresar.Text = "Ingresar al sistema      "
+        Me.BtnIngresar.Text = "Ingresar al sistema"
         Me.BtnIngresar.UseVisualStyleBackColor = False
         '
         'LblUsuario
         '
         Me.LblUsuario.AutoSize = True
         Me.LblUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.LblUsuario.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUsuario.Location = New System.Drawing.Point(651, 139)
+        Me.LblUsuario.Font = New System.Drawing.Font("Calibri", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsuario.Location = New System.Drawing.Point(651, 142)
         Me.LblUsuario.Name = "LblUsuario"
-        Me.LblUsuario.Size = New System.Drawing.Size(79, 26)
+        Me.LblUsuario.Size = New System.Drawing.Size(71, 23)
         Me.LblUsuario.TabIndex = 4
         Me.LblUsuario.Text = "Usuario"
         '
@@ -84,10 +84,10 @@ Partial Class FrmLogin
         '
         Me.LblClave.AutoSize = True
         Me.LblClave.BackColor = System.Drawing.Color.Transparent
-        Me.LblClave.Font = New System.Drawing.Font("Calibri", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblClave.Location = New System.Drawing.Point(635, 218)
+        Me.LblClave.Font = New System.Drawing.Font("Calibri", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblClave.Location = New System.Drawing.Point(635, 221)
         Me.LblClave.Name = "LblClave"
-        Me.LblClave.Size = New System.Drawing.Size(110, 26)
+        Me.LblClave.Size = New System.Drawing.Size(100, 23)
         Me.LblClave.TabIndex = 6
         Me.LblClave.Text = "Contraseña"
         '
@@ -111,9 +111,9 @@ Partial Class FrmLogin
         Me.LblAutor.Font = New System.Drawing.Font("Poppins", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAutor.Location = New System.Drawing.Point(500, 499)
         Me.LblAutor.Name = "LblAutor"
-        Me.LblAutor.Size = New System.Drawing.Size(361, 23)
+        Me.LblAutor.Size = New System.Drawing.Size(367, 23)
         Me.LblAutor.TabIndex = 8
-        Me.LblAutor.Text = "Desarrollado por Ronald López. @2021 MasterhostPeru"
+        Me.LblAutor.Text = "Desarrollado por Ronald López. @0000 MasterhostPeru"
         '
         'PbLogin
         '
@@ -179,10 +179,10 @@ Partial Class FrmLogin
         'TxtClave
         '
         Me.TxtClave.BorderColor = System.Drawing.Color.SeaGreen
-        Me.TxtClave.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtClave.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtClave.Location = New System.Drawing.Point(567, 247)
         Me.TxtClave.Name = "TxtClave"
-        Me.TxtClave.Size = New System.Drawing.Size(246, 30)
+        Me.TxtClave.Size = New System.Drawing.Size(246, 24)
         Me.TxtClave.TabIndex = 14
         Me.TxtClave.Text = "Sraonndarl817"
         Me.TxtClave.UseSystemPasswordChar = True
@@ -199,6 +199,18 @@ Partial Class FrmLogin
         Me.ImgLoading.TabStop = False
         Me.ImgLoading.Visible = False
         '
+        'BtnMinimizar
+        '
+        Me.BtnMinimizar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnMinimizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMinimizar.Location = New System.Drawing.Point(801, 9)
+        Me.BtnMinimizar.Name = "BtnMinimizar"
+        Me.BtnMinimizar.Size = New System.Drawing.Size(23, 23)
+        Me.BtnMinimizar.TabIndex = 16
+        Me.BtnMinimizar.Text = "-"
+        Me.BtnMinimizar.UseVisualStyleBackColor = False
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -207,6 +219,7 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
+        Me.Controls.Add(Me.BtnMinimizar)
         Me.Controls.Add(Me.TxtClave)
         Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.BtnCerrar)
@@ -246,4 +259,5 @@ Partial Class FrmLogin
     Friend WithEvents TxtClave As WindowsFormsControlLibrary1.BunifuCustomTextbox
     Friend WithEvents ImgLoading As PictureBox
     Public WithEvents TxtUsuario As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents BtnMinimizar As Button
 End Class
