@@ -36,10 +36,10 @@ Partial Class FrmLogin
         Me.MoverFormularioTitulo = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.MoverFormularioSubTitulo = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuBorde = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.TxtUsuario = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
-        Me.TxtClave = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.ImgLoading = New System.Windows.Forms.PictureBox()
         Me.BtnMinimizar = New System.Windows.Forms.Button()
+        Me.TxtClave = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.TxtUsuario = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -165,28 +165,6 @@ Partial Class FrmLogin
         Me.BunifuBorde.ElipseRadius = 7
         Me.BunifuBorde.TargetControl = Me
         '
-        'TxtUsuario
-        '
-        Me.TxtUsuario.BorderColor = System.Drawing.Color.SeaGreen
-        Me.TxtUsuario.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsuario.Location = New System.Drawing.Point(567, 168)
-        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(246, 30)
-        Me.TxtUsuario.TabIndex = 13
-        Me.TxtUsuario.Text = "RonaldLopezB"
-        '
-        'TxtClave
-        '
-        Me.TxtClave.BorderColor = System.Drawing.Color.SeaGreen
-        Me.TxtClave.Font = New System.Drawing.Font("Poppins", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtClave.Location = New System.Drawing.Point(567, 247)
-        Me.TxtClave.Name = "TxtClave"
-        Me.TxtClave.Size = New System.Drawing.Size(246, 24)
-        Me.TxtClave.TabIndex = 14
-        Me.TxtClave.Text = "Sraonndarl817"
-        Me.TxtClave.UseSystemPasswordChar = True
-        '
         'ImgLoading
         '
         Me.ImgLoading.BackColor = System.Drawing.Color.Transparent
@@ -211,6 +189,33 @@ Partial Class FrmLogin
         Me.BtnMinimizar.Text = "-"
         Me.BtnMinimizar.UseVisualStyleBackColor = False
         '
+        'TxtClave
+        '
+        Me.TxtClave.BorderColor = System.Drawing.Color.SeaGreen
+        Me.TxtClave.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtClave.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtClave.Location = New System.Drawing.Point(567, 247)
+        Me.TxtClave.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
+        Me.TxtClave.Name = "TxtClave"
+        Me.TxtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtClave.Size = New System.Drawing.Size(246, 23)
+        Me.TxtClave.TabIndex = 17
+        Me.TxtClave.Text = "RonaldLopezB"
+        Me.TxtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtUsuario
+        '
+        Me.TxtUsuario.BorderColor = System.Drawing.Color.SeaGreen
+        Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtUsuario.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsuario.Location = New System.Drawing.Point(567, 168)
+        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(246, 23)
+        Me.TxtUsuario.TabIndex = 18
+        Me.TxtUsuario.Text = "RonaldLopezB"
+        Me.TxtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -219,9 +224,9 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
-        Me.Controls.Add(Me.BtnMinimizar)
-        Me.Controls.Add(Me.TxtClave)
         Me.Controls.Add(Me.TxtUsuario)
+        Me.Controls.Add(Me.TxtClave)
+        Me.Controls.Add(Me.BtnMinimizar)
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.ImgLoading)
         Me.Controls.Add(Me.PbLogin)
@@ -256,8 +261,8 @@ Partial Class FrmLogin
     Friend WithEvents MoverFormularioTitulo As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents MoverFormularioSubTitulo As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents BunifuBorde As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents TxtClave As WindowsFormsControlLibrary1.BunifuCustomTextbox
     Friend WithEvents ImgLoading As PictureBox
-    Public WithEvents TxtUsuario As WindowsFormsControlLibrary1.BunifuCustomTextbox
     Friend WithEvents BtnMinimizar As Button
+    Public WithEvents TxtClave As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Public WithEvents TxtUsuario As WindowsFormsControlLibrary1.BunifuCustomTextbox
 End Class

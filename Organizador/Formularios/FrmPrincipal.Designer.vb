@@ -25,22 +25,18 @@ Partial Class FrmPrincipal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.LblTitulo = New System.Windows.Forms.Label()
-        Me.BunifuMoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
-        Me.BunifuBordeForm = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.tmOcultarSidebar = New System.Windows.Forms.Timer(Me.components)
-        Me.tmMostrarSideBar = New System.Windows.Forms.Timer(Me.components)
-        Me.tmMostrarNotificaciones = New System.Windows.Forms.Timer(Me.components)
-        Me.tmOcultarNotificacinoes = New System.Windows.Forms.Timer(Me.components)
         Me.pbNotificaciones = New System.Windows.Forms.PictureBox()
         Me.pbSideBar = New System.Windows.Forms.PictureBox()
         Me.pbRestaurar = New System.Windows.Forms.PictureBox()
         Me.pbMinimizar = New System.Windows.Forms.PictureBox()
         Me.pbMaximizar = New System.Windows.Forms.PictureBox()
         Me.pbCerrar = New System.Windows.Forms.PictureBox()
+        Me.LblTitulo = New System.Windows.Forms.Label()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
-        Me.TxtBuscadorGeneral2 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tmOcultarSidebar = New System.Windows.Forms.Timer(Me.components)
+        Me.tmMostrarSideBar = New System.Windows.Forms.Timer(Me.components)
+        Me.tmMostrarNotificaciones = New System.Windows.Forms.Timer(Me.components)
+        Me.tmOcultarNotificacinoes = New System.Windows.Forms.Timer(Me.components)
         Me.PanelNotificaciones = New System.Windows.Forms.Panel()
         Me.BtnContactos = New System.Windows.Forms.Button()
         Me.BtnCalendario = New System.Windows.Forms.Button()
@@ -55,6 +51,9 @@ Partial Class FrmPrincipal
         Me.PanelLateralPrincipal = New System.Windows.Forms.Panel()
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
+        Me.BunifuMoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.BunifuBordeFormulario = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BunifuMaterialTextbox1 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.PanelSuperior.SuspendLayout()
         CType(Me.pbNotificaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +62,6 @@ Partial Class FrmPrincipal
         CType(Me.pbMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelNotificaciones.SuspendLayout()
         CType(Me.pbInicialUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLateralPrincipal.SuspendLayout()
         Me.PanelFormularios.SuspendLayout()
@@ -73,7 +71,6 @@ Partial Class FrmPrincipal
         '
         Me.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(177, Byte), Integer))
         Me.PanelSuperior.Controls.Add(Me.pbNotificaciones)
-        Me.PanelSuperior.Controls.Add(Me.TxtBuscadorGeneral2)
         Me.PanelSuperior.Controls.Add(Me.pbSideBar)
         Me.PanelSuperior.Controls.Add(Me.pbRestaurar)
         Me.PanelSuperior.Controls.Add(Me.pbMinimizar)
@@ -86,45 +83,6 @@ Partial Class FrmPrincipal
         Me.PanelSuperior.Name = "PanelSuperior"
         Me.PanelSuperior.Size = New System.Drawing.Size(1100, 50)
         Me.PanelSuperior.TabIndex = 3
-        '
-        'LblTitulo
-        '
-        Me.LblTitulo.AutoSize = True
-        Me.LblTitulo.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTitulo.ForeColor = System.Drawing.Color.White
-        Me.LblTitulo.Location = New System.Drawing.Point(58, 9)
-        Me.LblTitulo.Name = "LblTitulo"
-        Me.LblTitulo.Size = New System.Drawing.Size(116, 34)
-        Me.LblTitulo.TabIndex = 1
-        Me.LblTitulo.Text = "Calendary"
-        '
-        'BunifuMoverFormulario
-        '
-        Me.BunifuMoverFormulario.Fixed = True
-        Me.BunifuMoverFormulario.Horizontal = True
-        Me.BunifuMoverFormulario.TargetControl = Me.PanelSuperior
-        Me.BunifuMoverFormulario.Vertical = True
-        '
-        'BunifuBordeForm
-        '
-        Me.BunifuBordeForm.ElipseRadius = 7
-        Me.BunifuBordeForm.TargetControl = Me
-        '
-        'tmOcultarSidebar
-        '
-        Me.tmOcultarSidebar.Interval = 15
-        '
-        'tmMostrarSideBar
-        '
-        Me.tmMostrarSideBar.Interval = 15
-        '
-        'tmMostrarNotificaciones
-        '
-        Me.tmMostrarNotificaciones.Interval = 15
-        '
-        'tmOcultarNotificacinoes
-        '
-        Me.tmOcultarNotificacinoes.Interval = 15
         '
         'pbNotificaciones
         '
@@ -196,6 +154,17 @@ Partial Class FrmPrincipal
         Me.pbCerrar.TabIndex = 2
         Me.pbCerrar.TabStop = False
         '
+        'LblTitulo
+        '
+        Me.LblTitulo.AutoSize = True
+        Me.LblTitulo.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitulo.ForeColor = System.Drawing.Color.White
+        Me.LblTitulo.Location = New System.Drawing.Point(58, 9)
+        Me.LblTitulo.Name = "LblTitulo"
+        Me.LblTitulo.Size = New System.Drawing.Size(116, 34)
+        Me.LblTitulo.TabIndex = 1
+        Me.LblTitulo.Text = "Calendary"
+        '
         'pbLogo
         '
         Me.pbLogo.Image = CType(resources.GetObject("pbLogo.Image"), System.Drawing.Image)
@@ -206,45 +175,26 @@ Partial Class FrmPrincipal
         Me.pbLogo.TabIndex = 0
         Me.pbLogo.TabStop = False
         '
-        'TxtBuscadorGeneral2
+        'tmOcultarSidebar
         '
-        Me.TxtBuscadorGeneral2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtBuscadorGeneral2.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscadorGeneral2.ForeColor = System.Drawing.Color.White
-        Me.TxtBuscadorGeneral2.HintForeColor = System.Drawing.Color.White
-        Me.TxtBuscadorGeneral2.HintText = "Buscador..."
-        Me.TxtBuscadorGeneral2.isPassword = False
-        Me.TxtBuscadorGeneral2.LineFocusedColor = System.Drawing.Color.Lavender
-        Me.TxtBuscadorGeneral2.LineIdleColor = System.Drawing.Color.White
-        Me.TxtBuscadorGeneral2.LineMouseHoverColor = System.Drawing.Color.Lavender
-        Me.TxtBuscadorGeneral2.LineThickness = 4
-        Me.TxtBuscadorGeneral2.Location = New System.Drawing.Point(274, 12)
-        Me.TxtBuscadorGeneral2.Margin = New System.Windows.Forms.Padding(34, 1, 1, 1)
-        Me.TxtBuscadorGeneral2.Name = "TxtBuscadorGeneral2"
-        Me.TxtBuscadorGeneral2.Size = New System.Drawing.Size(186, 34)
-        Me.TxtBuscadorGeneral2.TabIndex = 11
-        Me.TxtBuscadorGeneral2.TabStop = False
-        Me.TxtBuscadorGeneral2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.tmOcultarSidebar.Interval = 15
         '
-        'Button1
+        'tmMostrarSideBar
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.MistyRose
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(204, 1)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(23, 23)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.tmMostrarSideBar.Interval = 15
+        '
+        'tmMostrarNotificaciones
+        '
+        Me.tmMostrarNotificaciones.Interval = 15
+        '
+        'tmOcultarNotificacinoes
+        '
+        Me.tmOcultarNotificacinoes.Interval = 15
         '
         'PanelNotificaciones
         '
         Me.PanelNotificaciones.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.PanelNotificaciones.BackColor = System.Drawing.Color.Gainsboro
-        Me.PanelNotificaciones.Controls.Add(Me.Button1)
         Me.PanelNotificaciones.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelNotificaciones.Location = New System.Drawing.Point(230, 50)
         Me.PanelNotificaciones.Name = "PanelNotificaciones"
@@ -434,12 +384,45 @@ Partial Class FrmPrincipal
         Me.PanelFormularios.AutoSize = True
         Me.PanelFormularios.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.PanelFormularios.BackColor = System.Drawing.Color.White
+        Me.PanelFormularios.Controls.Add(Me.BunifuMaterialTextbox1)
         Me.PanelFormularios.Controls.Add(Me.BtnCerrar)
         Me.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelFormularios.Location = New System.Drawing.Point(230, 50)
         Me.PanelFormularios.Name = "PanelFormularios"
         Me.PanelFormularios.Size = New System.Drawing.Size(870, 600)
         Me.PanelFormularios.TabIndex = 6
+        '
+        'BunifuMoverFormulario
+        '
+        Me.BunifuMoverFormulario.Fixed = True
+        Me.BunifuMoverFormulario.Horizontal = True
+        Me.BunifuMoverFormulario.TargetControl = Me.PanelSuperior
+        Me.BunifuMoverFormulario.Vertical = True
+        '
+        'BunifuBordeFormulario
+        '
+        Me.BunifuBordeFormulario.ElipseRadius = 5
+        Me.BunifuBordeFormulario.TargetControl = Me
+        '
+        'BunifuMaterialTextbox1
+        '
+        Me.BunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.BunifuMaterialTextbox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty
+        Me.BunifuMaterialTextbox1.HintText = ""
+        Me.BunifuMaterialTextbox1.isPassword = False
+        Me.BunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue
+        Me.BunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.MistyRose
+        Me.BunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue
+        Me.BunifuMaterialTextbox1.LineThickness = 3
+        Me.BunifuMaterialTextbox1.Location = New System.Drawing.Point(20, 29)
+        Me.BunifuMaterialTextbox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.BunifuMaterialTextbox1.Name = "BunifuMaterialTextbox1"
+        Me.BunifuMaterialTextbox1.Size = New System.Drawing.Size(324, 34)
+        Me.BunifuMaterialTextbox1.TabIndex = 21
+        Me.BunifuMaterialTextbox1.Text = "BunifuMaterialTextbox1"
+        Me.BunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'FrmPrincipal
         '
@@ -468,7 +451,6 @@ Partial Class FrmPrincipal
         CType(Me.pbMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelNotificaciones.ResumeLayout(False)
         CType(Me.pbInicialUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelLateralPrincipal.ResumeLayout(False)
         Me.PanelLateralPrincipal.PerformLayout()
@@ -480,8 +462,6 @@ Partial Class FrmPrincipal
     Friend WithEvents PanelSuperior As Panel
     Friend WithEvents LblTitulo As Label
     Friend WithEvents pbCerrar As PictureBox
-    Friend WithEvents BunifuMoverFormulario As Bunifu.Framework.UI.BunifuDragControl
-    Friend WithEvents BunifuBordeForm As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents pbSideBar As PictureBox
     Friend WithEvents pbRestaurar As PictureBox
     Friend WithEvents pbMinimizar As PictureBox
@@ -492,9 +472,8 @@ Partial Class FrmPrincipal
     Friend WithEvents pbLogo As PictureBox
     Friend WithEvents tmMostrarNotificaciones As Timer
     Friend WithEvents tmOcultarNotificacinoes As Timer
-    Friend WithEvents TxtBuscadorGeneral2 As Bunifu.Framework.UI.BunifuMaterialTextbox
+
     Friend WithEvents PanelNotificaciones As Panel
-    Friend WithEvents Button1 As Button
     Friend WithEvents PanelLateralPrincipal As Panel
     Friend WithEvents BtnConfiguracion As Button
     Friend WithEvents LblInicialUsuario As Label
@@ -508,4 +487,7 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnContactos As Button
     Friend WithEvents PanelFormularios As Panel
     Friend WithEvents BtnCerrar As Button
+    Friend WithEvents BunifuMoverFormulario As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents BunifuBordeFormulario As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents BunifuMaterialTextbox1 As Bunifu.Framework.UI.BunifuMaterialTextbox
 End Class

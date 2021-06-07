@@ -20,32 +20,11 @@ Partial Class FrmProyectos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.BunifuMaterialTextbox1 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.LblTitulo = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'BunifuMaterialTextbox1
-        '
-        Me.BunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.BunifuMaterialTextbox1.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty
-        Me.BunifuMaterialTextbox1.HintText = ""
-        Me.BunifuMaterialTextbox1.isPassword = False
-        Me.BunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue
-        Me.BunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue
-        Me.BunifuMaterialTextbox1.LineThickness = 5
-        Me.BunifuMaterialTextbox1.Location = New System.Drawing.Point(214, 130)
-        Me.BunifuMaterialTextbox1.Margin = New System.Windows.Forms.Padding(30, 1, 1, 1)
-        Me.BunifuMaterialTextbox1.Name = "BunifuMaterialTextbox1"
-        Me.BunifuMaterialTextbox1.Size = New System.Drawing.Size(416, 39)
-        Me.BunifuMaterialTextbox1.TabIndex = 14
-        Me.BunifuMaterialTextbox1.Text = "Buscar..."
-        Me.BunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'LblTitulo
         '
@@ -81,7 +60,6 @@ Partial Class FrmProyectos
         Me.ClientSize = New System.Drawing.Size(1100, 582)
         Me.Controls.Add(Me.LblTitulo)
         Me.Controls.Add(Me.BtnCerrar)
-        Me.Controls.Add(Me.BunifuMaterialTextbox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmProyectos"
         Me.Text = "FrmProyectos"
@@ -90,7 +68,6 @@ Partial Class FrmProyectos
 
     End Sub
 
-    Friend WithEvents BunifuMaterialTextbox1 As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents LblTitulo As Label
     Friend WithEvents BtnCerrar As Button
 End Class

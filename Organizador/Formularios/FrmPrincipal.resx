@@ -2947,12 +2947,6 @@
         /9N7qWJ5HfjdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="BunifuMoverFormulario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>11, 5</value>
-  </metadata>
-  <metadata name="BunifuBordeForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>6, 36</value>
-  </metadata>
   <metadata name="tmOcultarSidebar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>191, 9</value>
   </metadata>
@@ -3196,4 +3190,10 @@
         4jSWT/HdlDYxYEZVqdOvqtQZV/G1A7M8bUoggQQSSOBBISnpB0w19J8fgMkZAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="BunifuMoverFormulario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>19, 10</value>
+  </metadata>
+  <metadata name="BunifuBordeFormulario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>23, 44</value>
+  </metadata>
 </root>
