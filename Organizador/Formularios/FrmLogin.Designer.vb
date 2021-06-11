@@ -23,8 +23,8 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.LblLoginTitulo = New System.Windows.Forms.Label()
-        Me.BtnIngresar = New System.Windows.Forms.Button()
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.LblClave = New System.Windows.Forms.Label()
         Me.LblSubTitulo = New System.Windows.Forms.Label()
@@ -38,8 +38,9 @@ Partial Class FrmLogin
         Me.BunifuBorde = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.ImgLoading = New System.Windows.Forms.PictureBox()
         Me.BtnMinimizar = New System.Windows.Forms.Button()
-        Me.TxtClave = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
-        Me.TxtUsuario = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.BtnIngresar = New Guna.UI.WinForms.GunaGradientButton()
+        Me.TxtUsuario = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtClave = New Guna.UI.WinForms.GunaTextBox()
         CType(Me.ImgLoading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,28 +56,14 @@ Partial Class FrmLogin
         Me.LblLoginTitulo.TabIndex = 0
         Me.LblLoginTitulo.Text = "Bienvenido a Calendary"
         '
-        'BtnIngresar
-        '
-        Me.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.BtnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnIngresar.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
-        Me.BtnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnIngresar.Location = New System.Drawing.Point(567, 310)
-        Me.BtnIngresar.Name = "BtnIngresar"
-        Me.BtnIngresar.Size = New System.Drawing.Size(257, 48)
-        Me.BtnIngresar.TabIndex = 3
-        Me.BtnIngresar.Text = "Ingresar al sistema"
-        Me.BtnIngresar.UseVisualStyleBackColor = False
-        '
         'LblUsuario
         '
         Me.LblUsuario.AutoSize = True
         Me.LblUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.LblUsuario.Font = New System.Drawing.Font("Calibri", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUsuario.Location = New System.Drawing.Point(651, 142)
+        Me.LblUsuario.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsuario.Location = New System.Drawing.Point(651, 144)
         Me.LblUsuario.Name = "LblUsuario"
-        Me.LblUsuario.Size = New System.Drawing.Size(71, 23)
+        Me.LblUsuario.Size = New System.Drawing.Size(70, 26)
         Me.LblUsuario.TabIndex = 4
         Me.LblUsuario.Text = "Usuario"
         '
@@ -84,10 +71,10 @@ Partial Class FrmLogin
         '
         Me.LblClave.AutoSize = True
         Me.LblClave.BackColor = System.Drawing.Color.Transparent
-        Me.LblClave.Font = New System.Drawing.Font("Calibri", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblClave.Location = New System.Drawing.Point(635, 221)
+        Me.LblClave.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblClave.Location = New System.Drawing.Point(635, 223)
         Me.LblClave.Name = "LblClave"
-        Me.LblClave.Size = New System.Drawing.Size(100, 23)
+        Me.LblClave.Size = New System.Drawing.Size(102, 26)
         Me.LblClave.TabIndex = 6
         Me.LblClave.Text = "Contraseña"
         '
@@ -189,32 +176,71 @@ Partial Class FrmLogin
         Me.BtnMinimizar.Text = "-"
         Me.BtnMinimizar.UseVisualStyleBackColor = False
         '
-        'TxtClave
+        'BtnIngresar
         '
-        Me.TxtClave.BorderColor = System.Drawing.Color.SeaGreen
-        Me.TxtClave.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtClave.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtClave.Location = New System.Drawing.Point(567, 247)
-        Me.TxtClave.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
-        Me.TxtClave.Name = "TxtClave"
-        Me.TxtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtClave.Size = New System.Drawing.Size(246, 23)
-        Me.TxtClave.TabIndex = 17
-        Me.TxtClave.Text = "RonaldLopezB"
-        Me.TxtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnIngresar.AnimationHoverSpeed = 0.07!
+        Me.BtnIngresar.AnimationSpeed = 0.03!
+        Me.BtnIngresar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnIngresar.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.BtnIngresar.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.BtnIngresar.BorderColor = System.Drawing.Color.Black
+        Me.BtnIngresar.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnIngresar.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnIngresar.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIngresar.ForeColor = System.Drawing.Color.White
+        Me.BtnIngresar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal
+        Me.BtnIngresar.Image = CType(resources.GetObject("BtnIngresar.Image"), System.Drawing.Image)
+        Me.BtnIngresar.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnIngresar.Location = New System.Drawing.Point(588, 299)
+        Me.BtnIngresar.Name = "BtnIngresar"
+        Me.BtnIngresar.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.BtnIngresar.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BtnIngresar.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnIngresar.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnIngresar.OnHoverImage = Nothing
+        Me.BtnIngresar.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnIngresar.Radius = 20
+        Me.BtnIngresar.Size = New System.Drawing.Size(203, 42)
+        Me.BtnIngresar.TabIndex = 19
+        Me.BtnIngresar.Text = "Ingresar al sistema"
         '
         'TxtUsuario
         '
-        Me.TxtUsuario.BorderColor = System.Drawing.Color.SeaGreen
-        Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtUsuario.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.TxtUsuario.BaseColor = System.Drawing.Color.White
+        Me.TxtUsuario.BorderColor = System.Drawing.Color.Silver
+        Me.TxtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtUsuario.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtUsuario.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtUsuario.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtUsuario.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUsuario.Location = New System.Drawing.Point(567, 168)
-        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(30, 3, 3, 3)
         Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(246, 23)
-        Me.TxtUsuario.TabIndex = 18
+        Me.TxtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtUsuario.Radius = 10
+        Me.TxtUsuario.Size = New System.Drawing.Size(246, 34)
+        Me.TxtUsuario.TabIndex = 21
         Me.TxtUsuario.Text = "RonaldLopezB"
         Me.TxtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtClave
+        '
+        Me.TxtClave.BackColor = System.Drawing.Color.Transparent
+        Me.TxtClave.BaseColor = System.Drawing.Color.White
+        Me.TxtClave.BorderColor = System.Drawing.Color.Silver
+        Me.TxtClave.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtClave.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtClave.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtClave.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtClave.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtClave.Location = New System.Drawing.Point(567, 247)
+        Me.TxtClave.Name = "TxtClave"
+        Me.TxtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtClave.Radius = 10
+        Me.TxtClave.Size = New System.Drawing.Size(246, 34)
+        Me.TxtClave.TabIndex = 22
+        Me.TxtClave.Text = "Sraonndarl817"
+        Me.TxtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FrmLogin
         '
@@ -224,8 +250,9 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.Calendary.My.Resources.Resources.back02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(864, 521)
-        Me.Controls.Add(Me.TxtUsuario)
         Me.Controls.Add(Me.TxtClave)
+        Me.Controls.Add(Me.TxtUsuario)
+        Me.Controls.Add(Me.BtnIngresar)
         Me.Controls.Add(Me.BtnMinimizar)
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.ImgLoading)
@@ -234,7 +261,6 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.LblSubTitulo)
         Me.Controls.Add(Me.LblClave)
         Me.Controls.Add(Me.LblUsuario)
-        Me.Controls.Add(Me.BtnIngresar)
         Me.Controls.Add(Me.LblLoginTitulo)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -249,7 +275,6 @@ Partial Class FrmLogin
     End Sub
 
     Friend WithEvents LblLoginTitulo As Label
-    Friend WithEvents BtnIngresar As Button
     Friend WithEvents LblUsuario As Label
     Friend WithEvents LblClave As Label
     Friend WithEvents LblSubTitulo As Label
@@ -263,6 +288,7 @@ Partial Class FrmLogin
     Friend WithEvents BunifuBorde As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents ImgLoading As PictureBox
     Friend WithEvents BtnMinimizar As Button
-    Public WithEvents TxtClave As WindowsFormsControlLibrary1.BunifuCustomTextbox
-    Public WithEvents TxtUsuario As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents BtnIngresar As Guna.UI.WinForms.GunaGradientButton
+    Friend WithEvents TxtUsuario As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtClave As Guna.UI.WinForms.GunaTextBox
 End Class
