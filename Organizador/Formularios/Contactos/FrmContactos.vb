@@ -33,4 +33,5 @@
         dv.RowFilter = String.Format("ContactoNombre Like '%{0}%'", TxtBuscadorContactos.Text)
     End Sub
 
+
 End Class

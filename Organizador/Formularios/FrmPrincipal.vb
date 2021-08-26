@@ -228,6 +228,10 @@ Public Class FrmPrincipal
         End If
     End Sub
 
+    Private Sub PanelFormularios_Paint(sender As Object, e As PaintEventArgs) Handles PanelFormularios.Paint
+
+    End Sub
+
     Private Sub tmOcultarNotificacinoes_Tick(sender As Object, e As EventArgs) Handles tmOcultarNotificacinoes.Tick
         If PanelNotificaciones.Width <= 0 Then
             Me.tmOcultarNotificacinoes.Enabled = False

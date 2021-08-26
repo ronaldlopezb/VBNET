@@ -51,9 +51,9 @@ Partial Class FrmPrincipal
         Me.PanelLateralPrincipal = New System.Windows.Forms.Panel()
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
+        Me.BunifuMaterialTextbox1 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.BunifuMoverFormulario = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuBordeFormulario = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.BunifuMaterialTextbox1 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.PanelSuperior.SuspendLayout()
         CType(Me.pbNotificaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSideBar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -392,18 +392,6 @@ Partial Class FrmPrincipal
         Me.PanelFormularios.Size = New System.Drawing.Size(870, 600)
         Me.PanelFormularios.TabIndex = 6
         '
-        'BunifuMoverFormulario
-        '
-        Me.BunifuMoverFormulario.Fixed = True
-        Me.BunifuMoverFormulario.Horizontal = True
-        Me.BunifuMoverFormulario.TargetControl = Me.PanelSuperior
-        Me.BunifuMoverFormulario.Vertical = True
-        '
-        'BunifuBordeFormulario
-        '
-        Me.BunifuBordeFormulario.ElipseRadius = 5
-        Me.BunifuBordeFormulario.TargetControl = Me
-        '
         'BunifuMaterialTextbox1
         '
         Me.BunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -423,6 +411,18 @@ Partial Class FrmPrincipal
         Me.BunifuMaterialTextbox1.TabIndex = 21
         Me.BunifuMaterialTextbox1.Text = "BunifuMaterialTextbox1"
         Me.BunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BunifuMoverFormulario
+        '
+        Me.BunifuMoverFormulario.Fixed = True
+        Me.BunifuMoverFormulario.Horizontal = True
+        Me.BunifuMoverFormulario.TargetControl = Me.PanelSuperior
+        Me.BunifuMoverFormulario.Vertical = True
+        '
+        'BunifuBordeFormulario
+        '
+        Me.BunifuBordeFormulario.ElipseRadius = 5
+        Me.BunifuBordeFormulario.TargetControl = Me
         '
         'FrmPrincipal
         '
